@@ -1,0 +1,174 @@
+{
+  "influx": [
+    {
+      "hostname": "localhost",
+      "port": 8086,
+      "ssl": 0,
+      "databaseName": "companyB",
+      "login": "companyBRW",
+      "password": "companyBRW",
+      "readTimeoutMs": 500
+    },
+    {
+      "hostname": "127.0.0.1",
+      "port": 7086,
+      "ssl": 1,
+      "databaseName": "companyA",
+      "login": "companyARW",
+      "password": "companyARW",
+      "readTimeoutMs": 500
+    },
+    {
+      "hostname": "192.168.1.120",
+      "port": 8086,
+      "ssl": 0,
+      "databaseName": "companyA",
+      "login": "companyARW",
+      "password": "companyARW",
+      "readTimeoutMs": 500
+    }
+  ],
+  "subscriptions": [
+    {
+      "opcUaNamespace": 1,
+      "opcUaNodeId": "[E-finity]_Meta:Sine/Sine9",
+      "influxField": "maturiPos",
+      "influxMeasurement": "Machine1"
+    },
+    {
+      "opcUaNamespace": 1,
+      "opcUaNodeId": "[E-finity]_Meta:Realistic/Realistic0",
+      "influxField": "airFlow",
+      "influxMeasurement": "Machine1"
+    },
+    {
+      "opcUaNamespace": 1,
+      "opcUaNodeId": "[E-finity]_Meta:Ramp/Ramp2",
+      "influxField": "airLockLeakage",
+      "influxMeasurement": "Machine1"
+    },
+    {
+      "opcUaNamespace": 1,
+      "opcUaNodeId": "[E-finity]_Meta:Realistic/Realistic3",
+      "influxField": "motorPerf",
+      "influxMeasurement": "Machine1"
+    },
+    {
+      "opcUaNamespace": 1,
+      "opcUaNodeId": "[E-finity]_Meta:Sine/Sine0",
+      "influxField": "supplyPres",
+      "influxMeasurement": "Machine1"
+    },
+    {
+      "opcUaNamespace": 1,
+      "opcUaNodeId": "VendorServerInfo/SystemCpuLoad",
+      "influxField": "conveyPres",
+      "influxMeasurement": "Machine1"
+    },
+
+    {
+      "opcUaNamespace": 1,
+      "opcUaNodeId": "[E-finity]_Meta:ReadOnly/ReadOnlyDouble2",
+      "influxField": "ROdouble2",
+      "influxMeasurement": "ReadOnce"
+    },
+
+    {
+      "opcUaNamespace": 1,
+      "opcUaNodeId": "[E-finity]_Meta:ReadOnly/ReadOnlyBoolean1",
+      "influxField": "ROBoolean1",
+      "influxMeasurement": "ReadOnce"
+    },
+    {
+      "opcUaNamespace": 1,
+      "opcUaNodeId": "[E-finity]_Meta:ReadOnly/ReadOnlyDouble1",
+      "influxField": "ROdouble1",
+      "influxMeasurement": "ReadOnce"
+    },
+    {
+      "opcUaNamespace": 1,
+      "opcUaNodeId": "[E-finity]_Meta:ReadOnly/ReadOnlyBoolean2",
+      "influxField": "ROboolean2",
+      "influxMeasurement": "ReadOnce"
+    },
+    {
+      "opcUaNamespace": 1,
+      "opcUaNodeId": "[E-finity]_Meta:ReadOnly/ReadOnlyString1",
+      "influxField": "ROstring1",
+      "influxMeasurement": "ReadOnce"
+    },
+    {
+      "opcUaNamespace": 1,
+      "opcUaNodeId": "[E-finity]_Meta:ReadOnly/ReadOnlyString2",
+      "influxField": "ROstring2",
+      "influxMeasurement": "ReadOnce"
+    },
+    {
+      "opcUaNamespace": 1,
+      "opcUaNodeId": "[E-finity]_Meta:ReadOnly/ReadOnlyShort2",
+      "influxField": "ROshort2",
+      "influxMeasurement": "ReadOnce"
+    },
+    {
+      "opcUaNamespace": 1,
+      "opcUaNodeId": "[E-finity]_Meta:ReadOnly/ReadOnlyShort1",
+      "influxField": "ROshort1",
+      "influxMeasurement": "ReadOnce"
+    },
+    {
+      "opcUaNamespace": 1,
+      "opcUaNodeId": "[E-finity]_Meta:ReadOnly/ReadOnlyLong1",
+      "influxField": "ROlong1",
+      "influxMeasurement": "ReadOnce"
+    },
+    {
+      "opcUaNamespace": 1,
+      "opcUaNodeId": "[E-finity]_Meta:ReadOnly/ReadOnlyLong2",
+      "influxField": "ROlong2",
+      "influxMeasurement": "ReadOnce"
+    },
+    {
+      "opcUaNamespace": 1,
+      "opcUaNodeId": "[E-finity]_Meta:ReadOnly/ReadOnlyInteger1",
+      "influxField": "ROinteger1",
+      "influxMeasurement": "ReadOnce"
+    },
+    {
+      "opcUaNamespace": 1,
+      "opcUaNodeId": "[E-finity]_Meta:ReadOnly/ReadOnlyInteger2",
+      "influxField": "ROinteger2",
+      "influxMeasurement": "ReadOnce"
+    },
+    {
+      "opcUaNamespace": 1,
+      "opcUaNodeId": "[E-finity]_Meta:ReadOnly/ReadOnlyInteger5",
+      "influxField": "ROinteger5",
+      "influxMeasurement": "ReadOnce"
+    },
+    {
+      "opcUaNamespace": 1,
+      "opcUaNodeId": "[E-finity]_Meta:ReadOnly/ReadOnlyInteger3",
+      "influxField": "ROinteger3",
+      "influxMeasurement": "ReadOnce"
+    },
+    {
+      "opcUaNamespace": 1,
+      "opcUaNodeId": "[E-finity]_Meta:ReadOnly/ReadOnlyInteger4",
+      "influxField": "ROinteger4",
+      "influxMeasurement": "ReadOnce"
+    },
+    {
+      "opcUaNamespace": 1,
+      "opcUaNodeId": "[E-finity]_Meta:ReadOnly/ReadOnlyFloat2",
+      "influxField": "ROfloat2",
+      "influxMeasurement": "ReadOnce"
+    },
+    {
+      "opcUaNamespace": 1,
+      "opcUaNodeId": "[E-finity]_Meta:ReadOnly/ReadOnlyFloat1",
+      "influxField": "ROfloat1",
+      "influxMeasurement": "ReadOnce"
+    }
+  ],
+  "opcUaServer": "opc.tcp://127.0.0.1:62541"
+}

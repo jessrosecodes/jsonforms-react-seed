@@ -1,0 +1,266 @@
+{
+  "title": "jsoneditorexample",
+  "schema": {
+    "definitions": {},
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://example.com/object1648003019.json",
+    "title": "PLC -> DB Map",
+    "type": "object",
+    "required": [
+      "influx",
+      "subscriptions",
+      "opcUaServer",
+      "influxPath"
+    ],
+    "properties": {
+      "influx": {
+        "$id": "#root/influx",
+        "title": "Influx",
+        "type": "array",
+        "default": [],
+        "items": {
+          "$id": "#root/influx/users",
+          "title": "User",
+          "type": "object",
+          "required": [
+            "hostname",
+            "port",
+            "ssl",
+            "databaseName",
+            "login",
+            "password",
+            "readTimeoutMs"
+          ],
+          "properties": {
+            "hostname": {
+              "$id": "#root/influx/users/hostname",
+              "title": "Hostname",
+              "type": "string",
+              "default": "",
+              "examples": [
+                "52.186.154.181"
+              ],
+              "pattern": "^.*$"
+            },
+            "port": {
+              "$id": "#root/influx/users/port",
+              "title": "Port",
+              "type": "integer",
+              "examples": [
+                8086
+              ],
+              "default": 0
+            },
+            "ssl": {
+              "$id": "#root/influx/users/ssl",
+              "title": "Ssl",
+              "type": "integer",
+              "examples": [
+                0
+              ],
+              "default": 0
+            },
+            "databaseName": {
+              "$id": "#root/influx/users/databaseName",
+              "title": "Databasename",
+              "type": "string",
+              "default": "",
+              "examples": [
+                "MIDPET"
+              ],
+              "pattern": "^.*$"
+            },
+            "login": {
+              "$id": "#root/influx/users/login",
+              "title": "Login",
+              "type": "string",
+              "default": "",
+              "examples": [
+                "MIDPET"
+              ],
+              "pattern": "^.*$"
+            },
+            "password": {
+              "$id": "#root/influx/users/password",
+              "title": "Password",
+              "type": "string",
+              "default": "",
+              "examples": [
+                "MIDPET"
+              ],
+              "pattern": "^.*$"
+            },
+            "readTimeoutMs": {
+              "$id": "#root/influx/users/readTimeoutMs",
+              "title": "Readtimeoutms",
+              "type": "integer",
+              "examples": [
+                5000
+              ],
+              "default": 0
+            }
+          }
+        }
+      },
+      "subscriptions": {
+        "$id": "#root/subscriptions",
+        "title": "Subscriptions",
+        "type": "array",
+        "default": [],
+        "items": {
+          "$id": "#root/subscriptions/opc",
+          "title": "Opc",
+          "type": "object",
+          "required": [
+            "opcUaNamespace",
+            "opcUaNodeId",
+            "influxField",
+            "influxMeasurement"
+          ],
+          "properties": {
+            "opcUaNamespace": {
+              "$id": "#root/subscriptions/opc/opcUaNamespace",
+              "title": "Opcuanamespace",
+              "type": "integer",
+              "examples": [
+                1
+              ],
+              "default": 0
+            },
+            "opcUaNodeId": {
+              "$id": "#root/subscriptions/opc/opcUaNodeId",
+              "title": "Opcuanodeid",
+              "type": "string",
+              "default": "",
+              "examples": [
+                "[EPMP]X02EFN_AOI.Blower_Max_Speed_SP"
+              ],
+              "pattern": "^.*$"
+            },
+            "influxField": {
+              "$id": "#root/subscriptions/opc/influxField",
+              "title": "Influxfield",
+              "type": "string",
+              "default": "",
+              "examples": [
+                "BlowerMaxSpeedSP"
+              ],
+              "pattern": "^.*$"
+            },
+            "influxMeasurement": {
+              "$id": "#root/subscriptions/opc/influxMeasurement",
+              "title": "Influxmeasurement",
+              "type": "string",
+              "default": "",
+              "examples": [
+                "Machine2"
+              ],
+              "pattern": "^.*$"
+            }
+          }
+        }
+      },
+      "opcUaServer": {
+        "$id": "#root/opcUaServer",
+        "title": "Opcuaserver",
+        "type": "string",
+        "default": "",
+        "examples": [
+          "opc.tcp://127.0.0.1:62541"
+        ],
+        "pattern": "^.*$"
+      },
+      "influxPath": {
+        "$id": "#root/influxPath",
+        "title": "Influxpath",
+        "type": "string",
+        "default": "",
+        "examples": [
+          "/home/user/influxdb-1.8.1-1/usr/bin/influx"
+        ],
+        "pattern": "^.*$"
+      }
+    }
+  },
+  "startval": {
+    "influx": [
+      {
+        "hostname": "52.186.154.181",
+        "port": 8086,
+        "ssl": 0,
+        "databaseName": "MIDPET",
+        "login": "MIDPET",
+        "password": "MIDPET",
+        "readTimeoutMs": 5000
+      },
+      {
+        "hostname": "127.0.0.1",
+        "port": 8086,
+        "ssl": 0,
+        "databaseName": "MIDPETLOCAL",
+        "login": "MIDPETLOCAL",
+        "password": "MIDPETLOCAL",
+        "readTimeoutMs": 5000
+      }
+    ],
+    "subscriptions": [
+      {
+        "opcUaNamespace": 1,
+        "opcUaNodeId": "[EPMP]X02EFN_AOI.Blower_Max_Speed_SP",
+        "influxField": "BlowerMaxSpeedSP",
+        "influxMeasurement": "Machine2"
+      },
+      {
+        "opcUaNamespace": 1,
+        "opcUaNodeId": "[EPMP]X01EFN_AOI.Blower_Start_Pres_SP",
+        "influxField": "BlowerStartPresSP",
+        "influxMeasurement": "Machine1"
+      }
+    ],
+    "opcUaServer": "opc.tcp://127.0.0.1:62541",
+    "influxPath": "/home/user/influxdb-1.8.1-1/usr/bin/influx"
+  },
+  "config": {
+    "theme": "bootstrap4",
+    "iconlib": "fontawesome5",
+    "object_layout": "grid",
+    "template": "markup",
+    "show_errors": "change",
+    "required_by_default": 0,
+    "no_additional_properties": 0,
+    "display_required_only": 0,
+    "remove_empty_properties": 0,
+    "keep_oneof_values": 0,
+    "ajax": 0,
+    "ajaxCredentials": 0,
+    "show_opt_in": 0,
+    "disable_edit_json": 0,
+    "disable_collapse": 0,
+    "disable_properties": 0,
+    "disable_array_add": 0,
+    "disable_array_reorder": 0,
+    "disable_array_delete": 0,
+    "enable_array_copy": 0,
+    "array_controls_top": 0,
+    "disable_array_delete_all_rows": 0,
+    "disable_array_delete_last_row": 0,
+    "prompt_before_delete": 0,
+    "lib_aceeditor": 0,
+    "lib_autocomplete": 0,
+    "lib_sceditor": 0,
+    "lib_simplemde": 0,
+    "lib_select2": 0,
+    "lib_selectize": 0,
+    "lib_choices": 0,
+    "lib_flatpickr": 0,
+    "lib_signaturepad": 0,
+    "lib_mathjs": 0,
+    "lib_cleavejs": 0,
+    "lib_jodit": 0,
+    "lib_jquery": 0,
+    "lib_dompurify": 0
+  },
+  "code": "// The following lines are mandatory and readonly. You can add custom code above and below.\nif (jseditor instanceof window.JSONEditor) jseditor.destroy();\njseditor = new window.JSONEditor(document.querySelector(\"#json-editor-form\"), jedata);",
+  "style": "",
+  "desc": "Add optional description here. (HTML format)"
+}

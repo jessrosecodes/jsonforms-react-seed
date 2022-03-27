@@ -35,6 +35,10 @@ const useStyles = makeStyles({
     margin: 'auto !important',
     display: 'block !important',
   },
+  updateButton: {
+    margin: 'auto !important',
+    display: 'block !important',
+  },
   demoform: {
     margin: 'auto',
     padding: '1rem',
@@ -59,7 +63,9 @@ const App = () => {
   const classes = useStyles();
   const [data, setData] = useState<any>(initialData);
   const stringifiedData = useMemo(() => JSON.stringify(data, null, 2), [data]);
-
+  const sendData = () => {
+    setData(data);
+  };
   const clearData = () => {
     setData({});
   };
@@ -94,6 +100,14 @@ const App = () => {
             variant='contained'
           >
             Clear data
+          </Button>
+          <Button
+            className={classes.updateButton}
+            onClick={sendData}
+            color='primary'
+            variant='contained'
+          >
+            Send Data
           </Button>
         </Grid>
         <Grid item sm={6}>
