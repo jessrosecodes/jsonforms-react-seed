@@ -1,55 +1,51 @@
 {
-  "type": "VerticalLayout",
-  "elements": [
-    {
-      "type": "Control",
-      "label": "Completed",
-      "scope": "#/properties/done"
-    },
-    {
-      "type": "Control",
-      "scope": "#/properties/name"
-    },
-    {
-      "type": "HorizontalLayout",
+  "type": "ListWithDetail",
+  "scope": "#/properties/users",
+  "options": {
+    "detail": {
+      "type": "VerticalLayout",
       "elements": [
         {
-          "type": "Control",
-          "scope": "#/properties/due_date"
-        },
-        {
-          "type": "Control",
-          "scope": "#/properties/rating"
-        }
-      ]
-    },
-    {
-      "type": "HorizontalLayout",
-      "elements": [
-        {
-          "type": "Control",
-          "scope": "#/properties/recurrence"
-        },
-        {
-          "type": "Control",
-          "scope": "#/properties/recurrence_interval",
-          "rule": {
-            "effect": "HIDE",
-            "condition": {
-              "type": "LEAF",
-              "scope": "#/properties/recurrence",
-              "expectedValue": "Never"
+          "type": "HorizontalLayout",
+          "elements": [
+            {
+              "type": "Control",
+              "scope": "#/properties/hostname",
+              "label": "Host Name"
+            },
+            {
+              "type": "Control",
+              "scope": "#/properties/port",
+              "label": "Port"
+            },
+            {
+              "type": "Control",
+              "scope": "#/properties/ssl",
+              "label": "SSL"
+            },
+            {
+              "type": "Control",
+              "scope": "#/properties/databaseName",
+              "label": "Database Name"
+            },
+            {
+              "type": "Control",
+              "scope": "#/properties/login",
+              "label": "Login"
             }
-          }
+          ]
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/password",
+          "label": "password"
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/readTimeoutMs",
+          "label": "Read Timeout MS"
         }
       ]
-    },
-    {
-      "type": "Control",
-      "scope": "#/properties/description",
-      "options": {
-        "multi": true
-      }
     }
-  ]
+  }
 }
